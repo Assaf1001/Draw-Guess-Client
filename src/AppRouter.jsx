@@ -6,7 +6,6 @@ import Drawing from './views/Drawing';
 import Waiting from './views/Wating';
 import Guess from './views/Guess';
 import { useContext } from 'react';
-import GameFull from './views/GameFull';
 
 const AppRouter = () => {
   const { state } = useContext(GameContext);
@@ -23,7 +22,6 @@ const AppRouter = () => {
             <Route path="/guess" element={<Guess />} />
           </>
         )}
-        <Route path="/game-full" element={<GameFull />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

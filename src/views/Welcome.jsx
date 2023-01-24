@@ -4,7 +4,6 @@ import { socket } from '../socket/socket';
 import View from '../components/View';
 import { GameContext } from '../context/GameContextProvider';
 import {
-  resetStateAction,
   setOpponentAction,
   setPathsAction,
   setScoreAction,
@@ -50,19 +49,6 @@ const Welcome = () => {
       dispatch(setScoreAction(score.points, score.seconds));
       navigate('/guess');
     });
-
-    // socket.on('userDisconnected', (opponentId) => {
-    //   console.log(opponentId, state.opponent.id);
-    //   // if (opponentId === state.opponent.id) {
-    //   dispatch(resetStateAction());
-    //   navigate('/welcome');
-    //   // }
-    // });
-
-    socket.on('gameFull', () => {
-      console.log('game-full');
-      navigate('/game-full');
-    });
   };
 
   useEffect(() => {
@@ -73,6 +59,7 @@ const Welcome = () => {
   return (
     <View>
       <div className="welcome">
+        {console.log(state)}
         <div>
           <h1>Draw & Guess</h1>
           <h2>

@@ -35,7 +35,7 @@ body {
 }
 
 button {
-  background-color: $color1;
+  background-color: $color2;
   color: $color3;
   border-radius: 4px;
   border: 1px solid black;
@@ -49,8 +49,8 @@ button {
   padding: 1rem;
   border: 1px solid black;
   border-radius: 4px;
-  background-color: $color2;
-  color: $color1;
+  background-color: $color1;
+  color: $color3;
   width: calc(100% - 2rem);
 
   p {

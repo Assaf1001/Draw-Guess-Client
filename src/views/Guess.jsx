@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { socket } from '../socket/socket';
 import {
   resetStateAction,
   setPathsAction,
@@ -78,6 +79,7 @@ const Guess = () => {
 
   const onClickEndGame = async () => {
     await saveNewScore(state.score);
+    socket.emit('sendGameEnded', state.opponent.id);
     dispatch(resetStateAction());
     navigate('/welcome');
   };
