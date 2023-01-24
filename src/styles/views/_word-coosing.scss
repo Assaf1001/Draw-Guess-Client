@@ -1,0 +1,21 @@
+.word-choosing {
+  .words-container {
+    .word-box {
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid black;
+      border-radius: 4px;
+      background-color: $color3;
+      color: $color1;
+
+      p {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
